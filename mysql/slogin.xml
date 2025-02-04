@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 3.4.10.1
+- http://www.phpmyadmin.net
+-
+- Host: localhost
+- Generation Time: Dec 16, 2024 at 12:45 AM
+- Server version: 5.5.20
+- PHP Version: 5.3.10
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="slogin" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="accounts">
+                CREATE TABLE `accounts` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `username` varchar(50) NOT NULL,
+                  `email` varchar(100) NOT NULL,
+                  `pubkey` varchar(255) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'slogin'
+    -->
+    <database name="slogin">
+        <!-- Table accounts -->
+        <table name="accounts">
+            <column name="id">1</column>
+            <column name="username">alex</column>
+            <column name="email">alex@harmotus.nnl</column>
+            <column name="pubkey">MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDghdfeCLh4tMyFuX/JSy+SU5VsHwz0A8vE4xAQhOMbomtaRXsCJ+6RMl9PLq9kgOW76v5obs7K+Fx3mL8nR1SE1Eqyo+F18VBa9gxyGYfG/n1Sunm/pxOXRSF3RWvT+6ezKGoKp7N/aqhfdRJVicHMFhlGFBu/Y51NP9OJsia1xwIDAQAB</column>
+        </table>
+        <table name="accounts">
+            <column name="id">2</column>
+            <column name="username">anna</column>
+            <column name="email">anna@harmotus.nnl</column>
+            <column name="pubkey">MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCOmSvz1uR5N/L9acV+Ino/5i5KLtw9FW1lzPycRjxNi4piHPRiNaUEp20TH47ODe6gJ7U8Pr+mLeSI+q56zBDeuro1dL+bUblTtCroi5oHhDt3nk2dBpdlFkw65fBSjrj+IyW695DAkaDWJH5RpQAA6F7yI03Kw7eXqDjjTHE0SwIDAQAB</column>
+        </table>
+    </database>
+</pma_xml_export>

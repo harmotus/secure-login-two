@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Harmotus">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../images/favicon.svg">
+	<title>Docs</title>
+	<style>
+		*{border:0;margin:0;padding:0;outline:0;font-size:16px;line-height:1.2;list-style:none;list-style-type:none;text-decoration:none;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+		body{margin:3em 6em;background-color:#fff;font-family:Arial,Helvetica,sans-serif}
+		h1{font-size:1.8rem;margin:1.2em 0}
+		h2{font-size:1.5rem;margin:1.5em 0}
+		h1,h2{color:#0f0f0f;font-weight:700}
+		p{margin:1.8em 0}
+		li{list-style-type:disc;margin:1.8em 0 1.8em 2.75em}
+		p,li{max-width:946px;text-align:justify}
+		blockquote{max-width:946px;padding:0 1.35em;border-left:.6em solid #42ab54}
+		img{width:100%;height:auto;margin:auto;border:none;outline:none;display:block;max-width:946px;box-sizing:border-box}
+		div{margin:0;width:100%;height:auto;line-height:0;display:block;max-width:946px}
+		@media (max-width: 1200px) {
+			body{margin:3em .9em 3em .6em}
+		}
+	</style>
+</head>
+<body>
+	<h1>Secure Login Two</h1>
+	<p>A secure login where the user's private key is never hosted on servers or the user's online devices ( this project can also be used as a form of two-factor authentication ( 2FA ) where the user's private key is never hosted on servers )</p>
+	<h2>Requirements</h2>
+	<div><img src="table.png" alt="table"></div>
+	<h2>Description</h2>
+	<p><b>1&nbsp;)&nbsp;&nbsp;</b> Using an online device (&nbsp;D1&nbsp;) the user goes to the server's login page (&nbsp;S1&nbsp;)</p>
+	<div><img src="login1.png" alt="login1"></div>
+	<p><b>2&nbsp;)&nbsp;&nbsp;</b> The user simply enters his username in the form, and this data is submitted to the server (&nbsp;login.php&nbsp;)</p>
+	<div><img src="login2.png" alt="login2"></div>
+	<p><b>3&nbsp;)&nbsp;&nbsp;</b> If the user's username exists in the server's database (&nbsp;code.php&nbsp;) then the server creates a random code (&nbsp;108 alphanumeric characters that are case sensitive&nbsp;) and a QR code containing the random code is sent to the user (&nbsp;code.php&nbsp;)</p>
+	<div><img src="code1.png" alt="code1"></div>
+	<p><b>4&nbsp;)&nbsp;&nbsp;</b> Using an offline device (&nbsp;D2&nbsp;) the user scans the QR code, the QR code data is encrypted with the user's private key and Base64 encoded. Later, using the online device (&nbsp;D1&nbsp;) the user scans a new QR code created on the offline device (&nbsp;D2&nbsp;) and the encrypted data contained in this new QR code is submitted to the server (&nbsp;code.php&nbsp;)</p>
+	<div><img src="code2.png" alt="code2"></div>
+	<p><b>5&nbsp;)&nbsp;&nbsp;</b> The server decrypts the encrypted data submitted by the user with the user's public key (&nbsp;test.php&nbsp;) if the decrypted data matches the random code created by the server then the user will be able to access the user's home page (&nbsp;home.php&nbsp;)</p>
+	<div><img src="home.png" alt="home"></div>
+	<p><b>6&nbsp;)&nbsp;&nbsp;</b> And the user will also be able to access the user's profile page (&nbsp;profile.php&nbsp;)</p>
+	<div><img src="profile.png" alt="profile"></div>
+	<h2>Types of Philosophy</h2>
+	<blockquote>Philosophy : <b>Never-Never</b></blockquote>
+	<ul>
+		<li>Private Keys : (&nbsp;<b>Never</b> on servers&nbsp;) and (&nbsp;<b>Never</b> on online devices&nbsp;)</li>
+		<li>Therefore, public keys only on (&nbsp;online or offline&nbsp;) servers and private keys only on offline devices.</li>
+		<li>This philosophy only applies when using asymmetric encryption algorithms (&nbsp;RSA, ECDSA, EdDSA, etc.&nbsp;)</li>
+	</ul>
+	<blockquote>Philosophy : <b>Only-Only</b></blockquote>
+	<ul>
+		<li>Private Keys : (&nbsp;<b>Only</b> on offline servers&nbsp;) and (&nbsp;<b>Only</b> on offline devices&nbsp;)</li>
+		<li>Therefore, private keys : never on online servers and never on online devices.</li>
+		<li>This philosophy only applies when using symmetric encryption algorithms (&nbsp;AES, 3DES, etc.&nbsp;)</li>
+	</ul>
+	<h2>License</h2>
+	<div><a href="https://opensource.org/license/mit">MIT</a></div>
+</body>
+</html>
