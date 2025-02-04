@@ -20,7 +20,7 @@ A secure login where the user's private key is never hosted on servers or the us
 
 ![code1](docs/code1.png)
 
-**4&nbsp;)&nbsp;** Using an offline device (&nbsp;D2&nbsp;) the user scans the QR code, the QR code data is encrypted with the user's private key and Base64 encoded. Later, using the online device (&nbsp;D1&nbsp;) the user scans a new QR code created on the offline device (&nbsp;D2&nbsp;) and the encrypted data contained in this new QR code is submitted to the server (&nbsp;code.php&nbsp;)
+**4&nbsp;)&nbsp;** Using an offline device (&nbsp;D2&nbsp;) the user scans the QR code, the QR code data is encrypted with the user's private key and Base64 encoded. Subsequently, using the online device (&nbsp;D1&nbsp;) the user scans a new QR code created on the offline device (&nbsp;D2&nbsp;) and the encrypted data contained in this new QR code is submitted to the server (&nbsp;code.php&nbsp;)
 
 ![code2](docs/code2.png)
 
