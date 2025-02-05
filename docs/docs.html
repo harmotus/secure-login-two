@@ -36,7 +36,7 @@
 	<div><img src="login2.png" alt="login2"></div>
 	<p><b>3&nbsp;)&nbsp;&nbsp;</b> If the user's username exists in the server's database (&nbsp;code.php&nbsp;) then the server creates a random code (&nbsp;108 alphanumeric characters that are case sensitive&nbsp;) and a QR code containing the random code is sent to the user (&nbsp;code.php&nbsp;)</p>
 	<div><img src="code1.png" alt="code1"></div>
-	<p><b>4&nbsp;)&nbsp;&nbsp;</b> Using an offline device (&nbsp;D2&nbsp;) the user scans the QR code, the QR code data is encrypted with the user's private key and Base64 encoded. Subsequently, using the online device (&nbsp;D1&nbsp;) the user scans a new QR code created on the offline device (&nbsp;D2&nbsp;) and the encrypted data contained in this new QR code is submitted to the server (&nbsp;code.php&nbsp;)</p>
+	<p><b>4&nbsp;)&nbsp;&nbsp;</b> Using an offline device (&nbsp;D2&nbsp;) the user scans the QR code, encrypts the QR code data with the user's private key and creates a new QR code. Subsequently, using the online device (&nbsp;D1&nbsp;) the user scans the new QR code created on the offline device (&nbsp;D2&nbsp;) and the encrypted data contained in this new QR code is submitted to the server (&nbsp;code.php&nbsp;)</p>
 	<div><img src="code2.png" alt="code2"></div>
 	<p><b>5&nbsp;)&nbsp;&nbsp;</b> The server decrypts the encrypted data submitted by the user with the user's public key (&nbsp;test.php&nbsp;) if the decrypted data matches the random code created by the server then the user will be able to access the user's home page (&nbsp;home.php&nbsp;)</p>
 	<div><img src="home.png" alt="home"></div>

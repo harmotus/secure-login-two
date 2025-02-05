@@ -1,0 +1,51 @@
+{
+  "name": "secure-login-two",
+  "version": "1.0.0",
+  "description": "A secure login where the user's private key is never hosted on servers or the user's online devices ( this project can also be used as a form of two-factor authentication ( 2FA ) where the user's private key is never hosted on servers )",
+  "main": "js/wordwrap.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "mysql",
+    "php",
+    "security",
+    "html5",
+    "authentication",
+    "login",
+    "qr-code",
+    "rsa",
+    "mysql-database",
+    "php-mysqli",
+    "php-login",
+    "two-factor-authentication",
+    "php-pdo",
+    "rsa-key-pair",
+    "2fa",
+    "password-protection",
+    "php-authentication",
+    "rsa-encryption",
+    "responsive-web-design"
+  ],
+  "author": "Harmotus",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harmotus/secure-login-two.git"
+  },
+  "bugs": {
+    "url": "https://github.com/harmotus/secure-login-two/issues"
+  },
+  "homepage": "https://github.com/harmotus/secure-login-two#readme",
+  "dependencies": {
+    "qrcodejs2": "^0.0.2",
+    "qr-scanner": "^1.4.2"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2"
+  }
+}
